@@ -1,0 +1,14 @@
+server:
+  port: 2222
+spring:  application:    name: hostpital-service
+  datasource:    url: jdbc:mysql://localhost:3306/hostpital_service
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:      ddl-auto: update
+eureka:  client:    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:    hostname: localhost 
